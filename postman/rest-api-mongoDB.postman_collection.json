@@ -1,0 +1,235 @@
+{
+	"info": {
+		"_postman_id": "ba3970d0-1a43-4309-8094-fc300be31fc7",
+		"name": "Rest Api MongoDB",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Top level service",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8080",
+					"host": [
+						"localhost"
+					],
+					"port": "8080"
+				},
+				"description": "Here you get a first glimpse of what this server has to offer"
+			},
+			"response": []
+		},
+		{
+			"name": "People",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8080/people",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"people"
+					]
+				},
+				"description": "There is a people link located at http://localhost:8080/people. It has some options such as ?page, ?size, and ?sort."
+			},
+			"response": []
+		},
+		{
+			"name": "Get People by Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8080/people/5bd0dec036e2f466de8635c5",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"people",
+						"5bd0dec036e2f466de8635c5"
+					]
+				},
+				"description": "There is a people link located at http://localhost:8080/people. It has some options such as ?page, ?size, and ?sort."
+			},
+			"response": []
+		},
+		{
+			"name": "Insert People",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{  \n\t\"firstName\" : \"Shereck\",  \n\t\"lastName\" : \"Third\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/people",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"people"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/people/search",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"people",
+						"search"
+					]
+				},
+				"description": "Find all the custom queries"
+			},
+			"response": []
+		},
+		{
+			"name": "Search by last name",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/people/search/findByLastName?name=Third",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"people",
+						"search",
+						"findByLastName"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Third"
+						}
+					]
+				},
+				"description": "Find all the custom queries"
+			},
+			"response": []
+		},
+		{
+			"name": "Update People",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{  \n\t\"firstName\" : \"Shereck\",  \n\t\"lastName\" : \"The Third\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/people/5bd0ead736e2f466de8635c7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"people",
+						"5bd0ead736e2f466de8635c7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete People",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/people/5bd0ee6436e2f471981a775a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"people",
+						"5bd0ee6436e2f471981a775a"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
